@@ -54,7 +54,7 @@ void Board::printBoard() {
 		for(int x = 0; x < WIDTH; x++) {
 			std::cout << board[y][x].getRep() << "|";
 		}
-		std::cout << " " << (y+1) << std::endl;
+		std::cout << " " << (8-y) << std::endl;
 	}
 	std::cout << "-";
 	for(int i = 0; i < WIDTH; i++) {
