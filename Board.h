@@ -17,10 +17,11 @@ private:
 public:
 	Board();
 	void printBoard();
-	void makeMove(char move[]); //recieves a string that is algebraic notation of the intended move
-	bool legalMove(char move[], int team);	//checks if the move is legal
-											//(eg checks if king in move is only moving onesquare)
-											//also checks if the move is legal for the team specified
+	Piece findPiece(int x, int y); //given a coordinate on the board and returns the Piece at that position
+	void movePiece(int x1, int y1, int x2, int y2); //recieves two coordinates, of the start and end point of the move
+	bool legalMove(int x1, int y1, int x2, int y2, int team);	//checks if the move is legal
+																//(eg checks if king in move is only moving onesquare)
+																//also checks if the move is legal for the team specified
 };
 
 
