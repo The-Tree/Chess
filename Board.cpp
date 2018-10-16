@@ -62,3 +62,15 @@ void Board::printBoard() {
 	}
 	std::cout << std::endl;
 }
+
+Piece Board::findPiece(int x, int y) {
+	return board[y][x];
+}
+
+void Board::movePiece(int x1, int y1, int x2, int y2) {
+	board[y2][x2] = board[y1][x1];
+	board[y2][x2].setX(x2);
+	board[y2][x2].setY(y2);
+
+	board[y1][x1] = Empty(x1, y1);
+}

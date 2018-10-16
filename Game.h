@@ -20,7 +20,7 @@ private:
 public:
 	Game();
 	Game(int whitePlayer, int blackPlayer); //only input is if whiteplayer and blackplayer are human or ai
-	Game(std::string file, int whitePlayer, int blackPlayer); //takes in a pgn file for the game to initialize game as
+	Game(std::string file, int whitePlayer1, int blackPlayer2); //takes in a pgn file for the game to initialize game as
 	void makeMove(std::string move); 	//given a string
 										//interprets the string input, and makes the move if it is a valid one
 
