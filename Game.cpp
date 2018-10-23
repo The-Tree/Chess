@@ -31,18 +31,15 @@ int Game::makeMove(std::string move, int team) {
 		// if move illegal, indicates by returning a given int indicating which if failed in above order
 	}
 	else { // if not castling ---
-		if(move.at(0) == 'K' || move.at(0) == 'Q' || move.at(0) == 'R' || move.at(0) == 'N' || move.at(0) == 'B' ||
-				move.at(0) == 'P') { //if piece is given or indicated directly
 
-		}
-		else if (islower(move.at(0)) || isdigit(move.at(0))){ 	//if the first char isdigit or islower, it may be a pos
-																//if no piece directly indicated (PGN says it is a pawn)
+		//parse string -- i need to parse it character by character basically
 
-		}
-		else { //if move is illegal due to indicating a nonvalid piece or using an invalid character
-
-		}
-
+		//if piece is given or indicated directly
+		//if next char is valid digit, then it must be the initial num
+		//if next char is valid letter, then it must be
+		//if the first char isdigit or islower, it may be a pos
+		//if no piece directly indicated (PGN says it is a pawn)
+		//if move is illegal due to indicating a nonvalid piece or using an invalid character
 		// checks if initial location of piece has a piece of the given type (if the initial location is given)
 		// if start is valid, stores the specific piece
 		// checks if target move is within bounds of board

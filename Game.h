@@ -16,6 +16,7 @@ private:
 	int whitePlayer; //whitePlayer (0 if human player, 1 if ai player)
 	int blackPlayer;
 	int playerTurn; //whos turn it is - whiteplayer [1] or blackplayer [2]
+	void parseMove(std::string move); //
 
 public:
 	Game();
