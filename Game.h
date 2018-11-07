@@ -22,7 +22,7 @@ public:
 	Game();
 	Game(int whitePlayer, int blackPlayer); //only input is if whiteplayer and blackplayer are human or ai
 	Game(std::string file, int whitePlayer1, int blackPlayer2); //takes in a pgn file for the game to initialize game as
-	int makeMove(std::string move, int team); 	//given a string and int team (0 white 1 black)
+	int makeMove(const char *move, int team); 	//given a string and int team (0 white 1 black)
 												//interprets the string input, and makes the move if it is a valid one
 												//int return type helps check if there are issues (returns certain ints
 												//if move is invalid in certain way)

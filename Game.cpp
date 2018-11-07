@@ -4,6 +4,7 @@
 
 #include <ctype.h>
 #include "Game.h"
+#include <iostream>
 
 Game::Game() {
 	gameBoard = Board();
@@ -19,7 +20,13 @@ Game::Game(int whitePlayer1, int blackPlayer2) {
 	playerTurn = 1;
 }
 
-int Game::makeMove(std::string move, int team) {
+int Game::makeMove(const char *move, int team) {
+	for(int i = sizeof(move)-1; i >= 0; i++) {
+		std::cout << move[i];
+	}
+
+	/*
+	 * no longer useful will remove when done
 	if(move.compare("O-O") == 0 || move.compare("O-O-O") == 0) { // if castling ---
 		// checks if given rook is in right position
 		// checks if pieces are in the way
@@ -47,5 +54,5 @@ int Game::makeMove(std::string move, int team) {
 		// checks if target move puts king in check (keeps this stored, just in case puts enemy in check or checkmate)
 		// if none of the above are true moves piece returns isCheckMove that was stored (-1 if no check, 0-3 if check/mate)
 		// if any invalid, returns given integer so this is known
-	}
+	}*/
 }
